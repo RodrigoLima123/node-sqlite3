@@ -1,0 +1,13 @@
+knex 
+
+
+- knex init 
+
+- knex migrate:make create_table_users
+
+- knex migrate:latest
+
+
+
+dar um insert pelo knex:
+node config/database.js

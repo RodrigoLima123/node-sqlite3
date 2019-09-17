@@ -1,5 +1,17 @@
 exports.post = (req, res, next) => {
-    res.status(201).send(req.body);
+    var product = new Product(req.body);
+    product
+        .save()
+        .then(x => {
+            res.status(201).send({
+                massage:'Usuário cadastrado com sucesso!'
+            });
+        }).catch(e => {
+            res.status(201).send({
+                massage: 'Falha ao cadastrar usuário',
+                data: e
+            });
+        });
 };
 
 exports.put = (req, res, next) => {

@@ -3,11 +3,14 @@ const knex = require('knex')(knexfile)
 
 module.exports = knex 
 
-knex('users').insert ({
-    name: 'Teste',
-    email: 'teste@teste.com.br',
-    password: 'teste@gmail.com'
-}).then(data => console.log(data))
+
+// INSERT
+
+// knex('users').insert ({
+//     name: 'Teste',
+//     email: 'teste@teste.com.br',
+//     password: 'teste@gmail.com'
+// }).then(data => console.log(data))
 
 
 

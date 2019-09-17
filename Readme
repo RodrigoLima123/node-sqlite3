@@ -1,11 +1,17 @@
 knex 
 
 
+dentro de src/
+
 - knex init 
 
 - knex migrate:make create_table_users
 
 - knex migrate:latest
+
+Para dar o insert:
+
+node config/database.js
 
 
 

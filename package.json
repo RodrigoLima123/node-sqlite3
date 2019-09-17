@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./bin/server.js",
     "dev": "nodemon ./bin/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -17,9 +17,20 @@
     "express": "^4.17.1",
     "http": "0.0.0",
     "knex": "^0.19.4",
+    "objection": "^1.6.9",
     "sqlite3": "^4.1.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.2"
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.2",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageReporters": ["text"],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
+  
 }
